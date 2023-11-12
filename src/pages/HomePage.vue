@@ -2,6 +2,7 @@
 import { initFlowbite } from "flowbite";
 import AppJumbotron from "../components/AppJumbotron.vue";
 import AppCarousel from "../components/AppCarousel.vue";
+import AppHomeGrid from "../components/AppHomeGrid.vue";
 import AppFaq from "../components/AppFaq.vue";
 export default {
   name: "HomePage",
@@ -11,6 +12,7 @@ export default {
   components: {
     AppJumbotron,
     AppCarousel,
+    AppHomeGrid,
     AppFaq,
   },
   mounted() {
@@ -22,6 +24,7 @@ export default {
   <div>
     <AppJumbotron />
     <AppCarousel />
+    <AppHomeGrid />
     <AppFaq />
   </div>
 </template>

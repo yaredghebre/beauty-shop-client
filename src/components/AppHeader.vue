@@ -15,7 +15,7 @@ export default {
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white md:hover:text-blue-700"
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
             >Beauty Shop</span
           >
         </a>
@@ -48,18 +48,18 @@ export default {
             class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
             <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              <router-link
+                to="/"
+                class="block py-2 px-3 text-white bg-red-700 rounded md:bg-transparent md:text-black md:p-0 md:hover:text-red-200 md:dark:text-red-200 dark:bg-red-200 md:dark:bg-transparent"
                 aria-current="page"
-                >Home</a
+                >Home</router-link
               >
             </li>
             <li>
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-200 md:p-0 md:w-auto dark:text-white md:dark:hover:text-red-200 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
                 Products
                 <svg
@@ -88,10 +88,10 @@ export default {
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
+                    <router-link
+                      to="/perfumes"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Perfumes</a
+                      >Perfumes</router-link
                     >
                   </li>
                   <li>
@@ -105,23 +105,23 @@ export default {
               </div>
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Gallery</a
+              <router-link
+                to="/gallery"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Gallery</router-link
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Contact</a
               >
             </li>

@@ -8,7 +8,11 @@ export default {
 </script>
 <template>
   <div>
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <div
+      id="default-carousel"
+      class="mb-10 relative w-full"
+      data-carousel="slide"
+    >
       <!-- Carousel wrapper -->
       <div
         class="bg-gray-600 py-10 relative h-56 overflow-hidden rounde md:h-96"
@@ -17,7 +21,7 @@ export default {
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="../assets/images/carousel/carousel-1.jpg"
-            class="absolute block w-3/5 -translate-x-1/2 -translate-y-1/2 top-2/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-2/2 left-1/2"
             alt="..."
           />
         </div>
@@ -25,7 +29,7 @@ export default {
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="../assets/images/carousel/carousel-2.jpg"
-            class="absolute block w-3/5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
         </div>
@@ -33,7 +37,7 @@ export default {
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="../assets/images/carousel/carousel-3.jpg"
-            class="absolute block w-3/5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
         </div>
@@ -41,7 +45,7 @@ export default {
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="../assets/images/carousel/carousel-4.jpg"
-            class="absolute block w-3/5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
         </div>
@@ -49,7 +53,7 @@ export default {
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
             src="../assets/images/carousel/carousel-5.jpg"
-            class="absolute block w-3/5 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             alt="..."
           />
         </div>

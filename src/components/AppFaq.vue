@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <template>
-  <div class="">
+  <div class="my-10">
     <div
       id="accordion-collapse"
       data-accordion="collapse"
