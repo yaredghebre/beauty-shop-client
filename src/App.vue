@@ -1,6 +1,7 @@
 <script>
 import { initFlowbite } from "flowbite";
 import AppHeader from "./components/AppHeader.vue";
+import AppJumbotron from "./components/AppJumbotron.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
@@ -9,6 +10,7 @@ export default {
   },
   components: {
     AppHeader,
+    AppJumbotron,
     AppFooter,
   },
   mounted() {
@@ -19,5 +21,6 @@ export default {
 
 <template>
   <AppHeader />
+  <AppJumbotron />
   <AppFooter />
 </template>
