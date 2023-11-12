@@ -1,12 +1,20 @@
-<script setup>
+<script>
+import { initFlowbite } from "flowbite";
+import AppHeader from "./components/AppHeader.vue";
+
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    AppHeader,
+  },
+  mounted() {
+    initFlowbite();
+  },
+};
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <AppHeader />
 </template>
-
-<style scoped>
-
-</style>
