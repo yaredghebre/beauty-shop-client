@@ -10,7 +10,7 @@ export default {
   <div class="">
     <div
       id="accordion-collapse"
-      data-accordion="open"
+      data-accordion="collapse"
       class="container mx-auto bg-gray-200"
     >
       <h2 id="accordion-collapse-heading-1">
