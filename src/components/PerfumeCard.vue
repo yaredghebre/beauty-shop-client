@@ -65,28 +65,16 @@ export default {
       <div class="flex w-full gap-11">
         <h3
           class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-if="perfume.category.name"
+          v-if="perfume.category"
         >
           {{ perfume.category.name }}
-        </h3>
-        <h3
-          class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-else
-        >
-          N/A
         </h3>
 
         <h3
           class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-if="perfume.type.name"
+          v-if="perfume.type"
         >
           {{ perfume.type.name }}
-        </h3>
-        <h3
-          class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-else
-        >
-          N/A
         </h3>
 
         <!-- Row 3 -->

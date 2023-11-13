@@ -32,7 +32,7 @@ export default {
     getCategories() {
       axios.get(`${store.shopUrl}/api/perfumes`).then((resp) => {
         console.log(resp);
-        this.categories = resp.data.results;
+        this.categories = resp.data.results.data;
       });
     },
     getPerfumes(pageNumber = 1) {
@@ -66,21 +66,27 @@ export default {
       <h1 class="font-bold text-center text-5xl">Profumi</h1>
       <!-- Filter -->
       <section class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-        <button
-          v-for="category in categories"
-          :key="category.id"
-          type="button"
-          :class="{
-            'text-blue-700 hover:text-white border-blue-600 bg-white hover:bg-blue-700':
-              selectedCategory === category.id,
-            'text-gray-900 border border-white hover:border-gray-200 bg-white':
-              selectedCategory !== category.id,
-          }"
-          @click="getCategories(category.id)"
-          class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:focus:ring-gray-800"
+        <label
+          for="category"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        ></label>
+        <select
+          v-model="selectedCategory"
+          id="category"
+          name=""
+          @change="getPerfumes()"
+          class="bg-gray-50 w-1/4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
         >
-          {{ category.name }}
-        </button>
+          <option selected>Choose a category</option>
+          <option value="All">Tutte le categorie</option>
+          <option
+            v-for="category in categories"
+            :value="category.id"
+            :key="category.id"
+          >
+            {{ category.name }}
+          </option>
+        </select>
       </section>
 
       <!-- Grid -->
