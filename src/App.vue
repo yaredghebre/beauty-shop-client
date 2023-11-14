@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-red-200">
+  <div class="bg-red-100">
     <AppHeader />
     <router-view />
     <AppFooter />

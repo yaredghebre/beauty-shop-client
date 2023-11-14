@@ -19,6 +19,7 @@ export default {
             >The Beauty Shop.</span
           >
         </a>
+
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
@@ -105,10 +106,10 @@ export default {
               </div>
             </li>
             <li>
-              <router-link
-                to="/gallery"
+              <a
+                href="#"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Gallery</router-link
+                >Gallery</a
               >
             </li>
             <li>

@@ -61,7 +61,7 @@ export default {
 <template>
   <div v-if="loading === false">
     <div class="container mx-auto my-10 min-h-[1000px]">
-      <h1 class="font-bold text-center text-5xl">Profumi</h1>
+      <h1 class="font-bold text-center text-5xl mb-10">Perfumes.</h1>
 
       <!-- Filter -->
 

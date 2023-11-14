@@ -33,7 +33,7 @@ export default {
 <template>
   <!-- Card -->
   <div
-    class="border-4 border-gray-600 rounded-lg cursor-pointer transform transition duration-150 hover:border-yellow-300"
+    class="border-4 border-gray-600 rounded-lg cursor-pointer transform transition duration-150 hover:border-gray-100"
   >
     <!-- Card Image -->
     <img
@@ -45,7 +45,7 @@ export default {
     <div v-else class="h-[250px] max-w-full rounded-lg flex justify-center">
       <!-- <span class="py-24 text-2xl font-semibold">Image not available</span> -->
       <img
-        src="../assets/images/logos/The Body Shop..jpg"
+        src="../assets/images/logos/thebeautyshop.jpg"
         alt=""
         class="object-cover w-full opacity-20"
       />
@@ -78,11 +78,11 @@ export default {
         </div>
 
         <div class="flex gap-4 xs:mt-3 justify-center">
-          <a
-            href="#"
+          <router-link
+            :to="{ name: 'single-perfume', params: { id: perfume.id } }"
             class="flex items-center bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
             ><i class="fa-solid fa-info fa-xl"></i
-          ></a>
+          ></router-link>
           <a
             href="#"
             class="flex items-center bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
