@@ -17,7 +17,7 @@ export default {
           >
             <span
               class="self-center text-gray-500 text-xl transfom transition duration-100 hover:text-white font-semibold whitespace-nowrap dark:text-white"
-              >Beauty Shop</span
+              >The Beauty Shop.</span
             >
           </a>
           <ul
@@ -62,7 +62,7 @@ export default {
           <a
             href="https://flowbite.com/"
             class="transfom transition duration-100 hover:text-white hover:underline"
-            >Beauty Shop™</a
+            >The Beauty Shop.™</a
           >. All Rights Reserved.</span
         >
       </div>

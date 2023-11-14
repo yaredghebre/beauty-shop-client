@@ -1,8 +1,24 @@
 <script>
+import { initFlowbite } from "flowbite";
+import axios from "axios";
+import { store } from "../store";
 export default {
   name: "AppHomeGrid",
   data() {
-    return {};
+    return {
+      store,
+      perfumes: [],
+    };
+  },
+  mounted() {
+    this.getImages();
+  },
+  methods: {
+    getImages() {
+      axios.get(`${store.shopUrl}/api/perfumes`).then((resp) => {
+        this.perfumes = resp.data.results.data[0].image;
+      });
+    },
   },
 };
 </script>
@@ -31,45 +47,22 @@ export default {
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-13.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-2.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-3.jpg"
             alt=""
           />
         </div>
@@ -77,22 +70,22 @@ export default {
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-1.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-5.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-6.jpg"
             alt=""
           />
         </div>
@@ -100,22 +93,45 @@ export default {
       <div class="grid gap-4">
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-7.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-8.jpg"
             alt=""
           />
         </div>
         <div>
           <img
-            class="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-9.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="grid gap-4">
+        <div>
+          <img
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-10.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-11.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="h-full w-full object-cover rounded-lg"
+            src="../assets/images/masonry/masonry-12.jpg"
             alt=""
           />
         </div>
@@ -124,7 +140,7 @@ export default {
   </section>
 
   <!-- Bottom Link -->
-  <section class="container mx-auto mt-10 border-4 border-red-300">
+  <section class="container mx-auto mt-10 border-4 border-gray-900">
     <div class="dark:bg-gray-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <h1
