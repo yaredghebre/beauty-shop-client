@@ -47,7 +47,7 @@ export default {
       <img
         src="../assets/images/logos/The Body Shop..jpg"
         alt=""
-        class="object-cover w-full opacity-80"
+        class="object-cover w-full opacity-20"
       />
     </div>
 

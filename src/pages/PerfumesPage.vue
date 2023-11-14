@@ -26,14 +26,13 @@ export default {
   mounted() {
     initFlowbite();
     this.getPerfumes();
-    this.getCategories();
+    // this.getCategories();
+    this.setCategory();
   },
   methods: {
-    getCategories() {
-      axios.get(`${store.shopUrl}/api/perfumes`).then((resp) => {
-        console.log(resp);
-        this.categories = resp.data.results.data;
-      });
+    setCategory(category) {
+      this.selectedCategory = category;
+      this.getPerfumes();
     },
     getPerfumes(pageNumber = 1) {
       const params = {
@@ -48,7 +47,6 @@ export default {
         .get(`${store.shopUrl}/api/perfumes`, { params })
         .then((resp) => {
           this.perfumes = resp.data.results.data;
-          console.log(this.perfumes);
           this.currentPage = resp.data.results.current_page;
           this.lastPage = resp.data.results.last_page;
           this.totalPerfumes = resp.data.results.total;
@@ -64,8 +62,43 @@ export default {
   <div v-if="loading === false">
     <div class="container mx-auto my-10 min-h-[1000px]">
       <h1 class="font-bold text-center text-5xl">Profumi</h1>
+
       <!-- Filter -->
-      <section class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+
+      <div class="flex justify-center space-x-4 my-4">
+        <button
+          @click="setCategory('All')"
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        >
+          <span
+            class="text-xl relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            All
+          </span>
+        </button>
+        <button
+          @click="setCategory(1)"
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        >
+          <span
+            class="text-xl relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            For Men
+          </span>
+        </button>
+        <button
+          @click="setCategory(2)"
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+        >
+          <span
+            class="text-xl relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            For Women
+          </span>
+        </button>
+      </div>
+
+      <!-- <section class="flex items-center justify-center py-4 md:py-8 flex-wrap">
         <label
           for="category"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -87,7 +120,7 @@ export default {
             {{ category.name }}
           </option>
         </select>
-      </section>
+      </section> -->
 
       <!-- Grid -->
       <section class="grid grid-cols-2 md:grid-cols-3 xs:grid-cols-1 gap-4">
