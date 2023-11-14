@@ -55,22 +55,29 @@ export default {
     <div class="p-5 bg-white">
       <a href="#">
         <h5
-          class="text-4xl text font-semibold tracking-tight text-gray-900 dark:text-white"
+          class="text-4xl xs:text-3xl xs:text-center font-semibold tracking-tight text-gray-900 dark:text-white"
         >
           {{ perfume.title }}
         </h5>
       </a>
+
       <div class="flex items-center mt-2.5 mb-5">
         <div class="flex items-center space-x-1 rtl:space-x-reverse"></div>
       </div>
-      <div class="flex items-center justify-between">
-        <span class="text-3xl font-bold text-gray-900 dark:text-white"
-          >€{{ perfume.price }}</span
-        >
-        <span class="text-xl font-bold text-gray-900 dark:text-white">{{
-          perfume.category.name
-        }}</span>
-        <div class="flex gap-4">
+
+      <div class="flex lg:flex-row xs:flex-col justify-between">
+        <div class="flex flex-col items-center">
+          <span
+            class="lg:text-3xl xs:text-3xl font-bold text-gray-900 dark:text-white"
+            >€{{ perfume.price }}</span
+          >
+          <span
+            class="text-xl xs:text-lg font-bold text-gray-900 dark:text-white"
+            >{{ perfume.category.name }}</span
+          >
+        </div>
+
+        <div class="flex gap-4 xs:mt-3 justify-center">
           <a
             href="#"
             class="bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"

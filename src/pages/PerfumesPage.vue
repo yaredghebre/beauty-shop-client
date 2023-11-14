@@ -90,7 +90,7 @@ export default {
       </section>
 
       <!-- Grid -->
-      <section class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <section class="grid grid-cols-2 md:grid-cols-3 xs:grid-cols-1 gap-4">
         <!-- Card -->
         <div v-for="perfume in perfumes" :key="perfume.id">
           <PerfumeCard :perfume="perfume" />
