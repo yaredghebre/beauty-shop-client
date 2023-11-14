@@ -12,10 +12,10 @@ export default {
 <template>
   <nav
     v-if="lastPage"
-    class="mt-4 flex justify-end"
+    class="m-10 flex justify-center"
     aria-label="Page navigation example"
   >
-    <ul class="flex list-none">
+    <ul class="flex list-none bg-slate-200">
       <li
         :class="`flex items-center ${
           currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''
@@ -50,7 +50,9 @@ export default {
         }`"
       >
         <a
-          @click.prevent="$emit('changePage', currentPage + 1)"
+          @click.prevent="
+            currentPage !== lastPage && $emit('changePage', currentPage + 1)
+          "
           href="#"
           class="px-3 py-2 border"
           >Next</a
