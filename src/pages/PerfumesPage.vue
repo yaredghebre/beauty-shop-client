@@ -98,30 +98,6 @@ export default {
         </button>
       </div>
 
-      <!-- <section class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-        <label
-          for="category"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        ></label>
-        <select
-          v-model="selectedCategory"
-          id="category"
-          name=""
-          @change="getPerfumes()"
-          class="bg-gray-50 w-1/4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-        >
-          <option selected>Choose a category</option>
-          <option value="All">Tutte le categorie</option>
-          <option
-            v-for="category in categories"
-            :value="category.name"
-            :key="category.id"
-          >
-            {{ category.name }}
-          </option>
-        </select>
-      </section> -->
-
       <!-- Grid -->
       <section class="grid grid-cols-2 md:grid-cols-3 xs:grid-cols-1 gap-4">
         <!-- Card -->
