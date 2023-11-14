@@ -43,7 +43,12 @@ export default {
       :alt="perfume.title"
     />
     <div v-else class="h-[250px] max-w-full rounded-lg flex justify-center">
-      <span class="py-24 text-2xl font-semibold">Image not available</span>
+      <!-- <span class="py-24 text-2xl font-semibold">Image not available</span> -->
+      <img
+        src="../assets/images/logos/The Body Shop..jpg"
+        alt=""
+        class="object-cover w-full opacity-80"
+      />
     </div>
 
     <!-- Card Body -->
