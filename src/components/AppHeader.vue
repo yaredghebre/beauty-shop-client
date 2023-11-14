@@ -50,7 +50,7 @@ export default {
             <li>
               <router-link
                 to="/"
-                class="block py-2 px-3 text-white bg-red-700 rounded md:bg-transparent md:text-black md:p-0 md:hover:text-red-200 md:dark:text-red-200 dark:bg-red-200 md:dark:bg-transparent"
+                class="block py-2 px-3 text-white bg-gray-500 rounded md:bg-transparent transition transform duration-150 md:text-black md:p-0 md:hover:text-red-200 md:dark:text-red-200 dark:bg-red-200 md:dark:bg-transparent"
                 aria-current="page"
                 >Home</router-link
               >
@@ -59,7 +59,7 @@ export default {
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-200 md:p-0 md:w-auto dark:text-white md:dark:hover:text-red-200 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded transition transform duration-150 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-200 md:p-0 md:w-auto dark:text-white md:dark:hover:text-red-200 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
                 Products
                 <svg
@@ -107,21 +107,21 @@ export default {
             <li>
               <router-link
                 to="/gallery"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Gallery</router-link
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:scale-110 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Contact</a
               >
             </li>
