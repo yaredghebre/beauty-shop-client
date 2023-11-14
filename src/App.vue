@@ -25,3 +25,7 @@ export default {
     <AppFooter />
   </div>
 </template>
+
+<style lang="scss">
+@use "./fontawesome.scss" as *;
+</style>

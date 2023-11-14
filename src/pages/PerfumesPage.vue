@@ -81,7 +81,7 @@ export default {
           <option value="All">Tutte le categorie</option>
           <option
             v-for="category in categories"
-            :value="category.id"
+            :value="category.name"
             :key="category.id"
           >
             {{ category.name }}

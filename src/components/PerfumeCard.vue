@@ -31,70 +31,53 @@ export default {
 };
 </script>
 <template>
+  <!-- Card -->
   <div
-    class="border-4 border-gray-600 rounded-lg cursor-pointer hover:scale-105 transform transition duration-100 hover:border-gray-400"
+    class="border-4 border-gray-600 rounded-lg cursor-pointer transform transition duration-150 hover:border-yellow-300"
   >
-    <!-- Card-Image -->
+    <!-- Card Image -->
     <img
       v-if="perfume.image"
-      class="h-auto w-full"
+      class="h-[250px] w-full"
       :src="imgSrc"
       :alt="perfume.title"
     />
-    <div v-else class="h-auto max-w-full rounded-lg flex justify-center">
+    <div v-else class="h-[250px] max-w-full rounded-lg flex justify-center">
       <span class="py-24 text-2xl font-semibold">Image not available</span>
     </div>
 
-    <!-- Card-Body -->
+    <!-- Card Body -->
     <div class="p-5 bg-white">
-      <!-- Row 1 -->
-      <div class="flex w-full justify-between">
-        <h3
-          class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+      <a href="#">
+        <h5
+          class="text-4xl text font-semibold tracking-tight text-gray-900 dark:text-white"
         >
           {{ perfume.title }}
-        </h3>
-        <h3
-          class="mb-2 text-2xl font-semibold tracking-tight text-gray-800 dark:text-white"
-        >
-          €{{ perfume.price }}
-        </h3>
-
-        <!-- Row 2 -->
+        </h5>
+      </a>
+      <div class="flex items-center mt-2.5 mb-5">
+        <div class="flex items-center space-x-1 rtl:space-x-reverse"></div>
       </div>
-      <div class="flex w-full gap-11">
-        <h3
-          class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-if="perfume.category"
+      <div class="flex items-center justify-between">
+        <span class="text-3xl font-bold text-gray-900 dark:text-white"
+          >€{{ perfume.price }}</span
         >
-          {{ perfume.category.name }}
-        </h3>
-
-        <h3
-          class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
-          v-if="perfume.type"
-        >
-          {{ perfume.type.name }}
-        </h3>
-
-        <!-- Row 3 -->
+        <span class="text-xl font-bold text-gray-900 dark:text-white">{{
+          perfume.category.name
+        }}</span>
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+            ><i class="fa-solid fa-info fa-xl"></i
+          ></a>
+          <a
+            href="#"
+            class="bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+            ><i class="fa-solid fa-xl fa-cart-shopping"></i
+          ></a>
+        </div>
       </div>
-      <div class="flex w-full gap-11">
-        <h3
-          class="mb-2 text-lg font-semibold tracking-tight text-gray-800 dark:text-white"
-        >
-          <!-- {{ perfume.brand }} -->
-        </h3>
-        <h3
-          class="mb-2 text-lg font-semibold tracking-tight text-gray-800 dark:text-white"
-        >
-          <!-- {{ perfume.size }} -->
-        </h3>
-      </div>
-      <!-- Row 4 -->
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        {{ descriptionPreview }}
-      </p>
     </div>
   </div>
 </template>
