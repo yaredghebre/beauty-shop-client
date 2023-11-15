@@ -18,15 +18,17 @@ export default {
       axios
         .get(`${store.shopUrl}/api/perfumes/${id}`)
         .then((response) => {
-          this.perfume = response.data.results; // Supponendo che vuoi il primo profumo
+          this.perfume = response.data.results;
         })
         .catch((error) => {
-          console.error("Errore nella chiamata API:", error);
+          console.error(error);
         });
     },
+  },
+  computed: {
     imgSrc() {
       if (!this.perfume.image) return "";
-      if (this.perfume.image.startsWith("https//")) {
+      if (this.perfume.image.startsWith("https://")) {
         return this.perfume.image;
       } else {
         return `${this.store.shopUrl}/storage/${this.perfume.image}`;
@@ -36,36 +38,81 @@ export default {
 };
 </script>
 <template>
-  <div class="flex container mx-auto my-20 h-screen rounded-lg bg-red-300">
+  <div
+    class="lg:container xs:m-5 p-5 lg:mx-auto lg:my-20 min-h-scree rounded-lg bg-red-300"
+  >
     <!-- Card -->
-    <div class="p-5 bg-white" v-if="perfume">
+    <div
+      class="p-4 xs:p-2 bg-white lg:h-ful flex lg:flex-row xs:flex-col"
+      v-if="perfume"
+    >
       <!-- Card Image -->
-      <div>
+      <div class="lg:w-3/5 h-full">
         <img
           v-if="perfume.image"
           :src="imgSrc"
           :alt="perfume.title"
-          class="h-[500px] w-1/2"
+          class="h-full w-full"
         />
 
         <img
           v-else
           src="../assets/images/logos/thebeautyshop.jpg"
           alt=""
-          class="h-[500px] max-w-full rounded-lg flex justify-center object-cover w-full opacity-20"
+          class="h-full w-full rounded-lg flex justify-center object-cover opacity-20"
         />
       </div>
 
       <!-- Card Body -->
-      <div>
-        <h5
-          class="text-4xl xs:text-3xl xs:text-center font-semibold tracking-tight text-gray-900 dark:text-white"
+      <div class="lg:w-2/5 h-full py-8 mx-5">
+        <h1
+          class="lg:text-5xl xs:text-3xl xs:text-center mb-5 font-semibold tracking-tight text-gray-900 dark:text-white"
         >
           {{ perfume.title }}
-        </h5>
+        </h1>
+
+        <div class="flex flex-col">
+          <span
+            class="lg:text-3xl xs:text-3xl font-bold text-end text-gray-900 dark:text-white"
+            >€{{ perfume.price }}</span
+          >
+          <span
+            class="text-xl xs:text-3xl mb-3 font-bold text-gray-900 dark:text-white"
+          >
+            {{ perfume.brand }}
+          </span>
+          <span
+            class="text-xl xs:text-lg font-bold mb-3 text-gray-900 dark:text-white"
+            >{{ perfume.category.name }}</span
+          >
+
+          <p class="lg:text-2xl xs:text-lg text-gray-900 dark:text-white mb-10">
+            {{ perfume.description }}
+          </p>
+
+          <div class="flex gap-4 xs:mt-3 justify-center">
+            <a
+              href="#"
+              class="items-center bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+              ><i class="fa-solid fa-xl fa-heart"></i
+            ></a>
+            <a
+              href="#"
+              class="items-center bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+              ><i class="fa-solid fa-shopping-cart fa-xl"></i
+            ></a>
+            <a
+              href="#"
+              class="items-center bg-gray-100 hover:bg-gray-700 transform transition duration-150 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+              ><i class="fa-solid fa-share-nodes fa-xl"></i
+            ></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../fontawesome.scss" as *;
+</style>

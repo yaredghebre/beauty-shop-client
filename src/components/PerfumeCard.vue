@@ -21,7 +21,7 @@ export default {
     },
     imgSrc() {
       if (!this.perfume.image) return "";
-      if (this.perfume.image.startsWith("https//")) {
+      if (this.perfume.image.startsWith("https://")) {
         return this.perfume.image;
       } else {
         return `${this.store.shopUrl}/storage/${this.perfume.image}`;
