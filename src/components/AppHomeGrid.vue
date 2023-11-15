@@ -101,7 +101,7 @@ export default {
         <div>
           <img
             class="h-full w-full object-cover rounded-lg"
-            src="../assets/images/masonry/masonry-8.jpg"
+            src="../assets/images/masonry/masonry-13.jpg"
             alt=""
           />
         </div>

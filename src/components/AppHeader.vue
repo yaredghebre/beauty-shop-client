@@ -56,11 +56,14 @@ export default {
                 >Home</router-link
               >
             </li>
+
             <li>
               <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
+                id="dropdownHoverButton"
+                data-dropdown-toggle="dropdownHover"
+                data-dropdown-trigger="hover"
                 class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded transition transform duration-150 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-200 md:p-0 md:w-auto dark:text-white md:dark:hover:text-red-200 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                type="button"
               >
                 Products
                 <svg
@@ -81,12 +84,12 @@ export default {
               </button>
               <!-- Dropdown menu -->
               <div
-                id="dropdownNavbar"
+                id="dropdownHover"
                 class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                  aria-labelledby="dropdownLargeButton"
+                  aria-labelledby="dropdownHoverButton"
                 >
                   <li>
                     <router-link
@@ -105,6 +108,7 @@ export default {
                 </ul>
               </div>
             </li>
+
             <li>
               <a
                 href="#"
