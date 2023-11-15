@@ -99,10 +99,10 @@ export default {
                     >
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <router-link
+                      :to="{ name: 'not-found' }"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Others</a
+                      >Others</router-link
                     >
                   </li>
                 </ul>
@@ -110,24 +110,24 @@ export default {
             </li>
 
             <li>
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'not-found' }"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Gallery</a
+                >Gallery</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'not-found' }"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >About</a
+                >About</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'not-found' }"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:scale-110 md:hover:bg-transparent transition transform duration-150 md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Contact</a
+                >Contact</router-link
               >
             </li>
           </ul>

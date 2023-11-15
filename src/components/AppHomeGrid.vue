@@ -30,12 +30,12 @@ export default {
         <h1
           class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
         >
-          Best Sellers
+          Best Sellers.
         </h1>
         <p
           class="mt-3 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
         >
-          Here you have just a taste of our most purchased products
+          Here you have just a taste of our most purchased products.
         </p>
       </div>
     </div>

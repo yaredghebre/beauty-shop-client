@@ -111,6 +111,11 @@ export default {
       :lastPage="lastPage"
       @changePage="getPerfumes"
     />
+    <div class="text-center mb-3 text-xl">
+      <p>
+        Results: <span class="text-blue-600">{{ totalPerfumes }}</span>
+      </p>
+    </div>
   </div>
 
   <div v-else>

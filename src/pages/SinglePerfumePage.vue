@@ -28,9 +28,6 @@ export default {
           }
         });
     },
-    // goBack() {
-    //   this.$route.go(-1);
-    // },
   },
   computed: {
     imgSrc() {
@@ -50,7 +47,7 @@ export default {
   >
     <!-- Card -->
     <div
-      class="relative p-4 xs:p-2 bg-white lg:h-ful flex lg:flex-row xs:flex-col"
+      class="relative p-4 xs:p-2 bg-white flex lg:flex-row xs:flex-col"
       v-if="perfume"
     >
       <!-- Card Image -->
@@ -71,9 +68,9 @@ export default {
       </div>
 
       <!-- Card Body -->
-      <div class="lg:w-2/5 h-full py-8 mx-5">
+      <div class="lg:w-2/5 h-full py-8 lg:py-40 mx-5">
         <h1
-          class="lg:text-5xl xs:text-3xl xs:text-center mb-5 font-semibold tracking-tight text-gray-900 dark:text-white"
+          class="lg:text-5xl xs:text-3xl xs:text-center lg:mb-20 mb-5 font-semibold tracking-tight text-gray-900 dark:text-white"
         >
           {{ perfume.title }}
         </h1>
@@ -118,10 +115,7 @@ export default {
       </div>
     </div>
 
-    <div v-else-if="errorMsg">
-      <!-- <h2 class="text-red-500 text-5xl">PAGINA INESISTENTE :(</h2> -->
-      <!-- <a @click.prevent="goBack()" class="" href=""></a> -->
-    </div>
+    <div v-else-if="errorMsg"></div>
     <router-link :to="{ name: 'perfumes' }" class="mt-3"></router-link>
   </div>
 </template>

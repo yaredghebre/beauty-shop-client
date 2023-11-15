@@ -13,8 +13,10 @@ export default {
       class="bg-green-300 py-20 w-2/5 mb-10 rounded-lg transform transition duration-150 hover:border-gray-400 hover:shadow-lg hover:shadow-gray-500"
     >
       <h2 class="text-center lg:text-5xl xs:text-lg">
-        We're sorry! <br />
-        This page doesn't exist :(
+        Unfortunately, <br />
+        this page doesn't exist. <br />
+        <br />
+        Yet.
       </h2>
     </div>
     <div class="flex gap-5">
