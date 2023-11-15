@@ -39,11 +39,11 @@ export default {
 </script>
 <template>
   <div
-    class="lg:container xs:m-5 p-5 lg:mx-auto lg:my-20 min-h-scree rounded-lg bg-red-300"
+    class="lg:container xs:m-5 p-5 lg:mx-auto lg:my-20 rounded-lg bg-red-300"
   >
     <!-- Card -->
     <div
-      class="p-4 xs:p-2 bg-white lg:h-ful flex lg:flex-row xs:flex-col"
+      class="relative p-4 xs:p-2 bg-white lg:h-ful flex lg:flex-row xs:flex-col"
       v-if="perfume"
     >
       <!-- Card Image -->
