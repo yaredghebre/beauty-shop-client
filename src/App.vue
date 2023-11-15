@@ -1,7 +1,7 @@
 <script>
 import { initFlowbite } from "flowbite";
+import { initTE, Offcanvas, Ripple, Dropdown } from "tw-elements";
 import AppHeader from "./components/AppHeader.vue";
-
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
@@ -11,9 +11,14 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    // initTE,
+    // Offcanvas,
+    // Ripple,
+    // Dropdown,
   },
   mounted() {
     initFlowbite();
+    initTE({ Offcanvas, Ripple, Dropdown });
   },
 };
 </script>

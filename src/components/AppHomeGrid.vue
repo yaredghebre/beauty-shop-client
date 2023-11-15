@@ -85,7 +85,7 @@ export default {
         <div>
           <img
             class="h-full w-full object-cover rounded-lg"
-            src="../assets/images/masonry/masonry-6.jpg"
+            src="../assets/images/masonry/masonry-12.jpg"
             alt=""
           />
         </div>
@@ -101,7 +101,7 @@ export default {
         <div>
           <img
             class="h-full w-full object-cover rounded-lg"
-            src="../assets/images/masonry/masonry-13.jpg"
+            src="../assets/images/masonry/masonry-14.jpg"
             alt=""
           />
         </div>
@@ -124,14 +124,14 @@ export default {
         <div>
           <img
             class="h-full w-full object-cover rounded-lg"
-            src="../assets/images/masonry/masonry-11.jpg"
+            src="../assets/images/masonry/masonry-6.jpg"
             alt=""
           />
         </div>
         <div>
           <img
             class="h-full w-full object-cover rounded-lg"
-            src="../assets/images/masonry/masonry-12.jpg"
+            src="../assets/images/masonry/masonry-11.jpg"
             alt=""
           />
         </div>
