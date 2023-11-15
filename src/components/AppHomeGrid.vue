@@ -146,7 +146,7 @@ export default {
         <h1
           class="text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-xl lg:text-4xl dark:text-white"
         >
-          Check out our complete collection
+          Check out our complete collection.
         </h1>
         <div
           class="mt-6 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"

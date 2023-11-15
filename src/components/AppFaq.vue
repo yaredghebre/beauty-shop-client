@@ -48,7 +48,7 @@ export default {
         <div
           class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
         >
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <p class="mb-2 font-bold text-gray-500 dark:text-gray-400">
             Beauty Shop is a brand new website about to be deployed, where you
             can get your favourites new scents and cosmetics delivered to your
             doorstep!
@@ -87,7 +87,9 @@ export default {
         class="hidden"
         aria-labelledby="accordion-collapse-heading-2"
       >
-        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+        <div
+          class="p-5 border border-b-0 font-bold border-gray-200 dark:border-gray-700"
+        >
           <p class="mb-2 text-gray-500 dark:text-gray-400">
             As much as I'd love to be able to develop an App version,
             unfortunately it isn't available. Yet. Hopefully, I'll get there
@@ -127,7 +129,9 @@ export default {
         class="hidden"
         aria-labelledby="accordion-collapse-heading-3"
       >
-        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+        <div
+          class="p-5 border border-t-0 border-gray-200 font-bold dark:border-gray-700"
+        >
           <p class="mb-2 text-gray-500 dark:text-gray-400">
             Once the WebApp will be ready, it will allow users to purchase
             products only on national territory. Again, one step at the time.
