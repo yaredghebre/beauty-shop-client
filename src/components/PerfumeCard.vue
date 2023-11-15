@@ -33,7 +33,7 @@ export default {
 <template>
   <!-- Card -->
   <div
-    class="border-4 border-gray-600 rounded-lg cursor-pointer transform transition duration-150 hover:border-gray-100"
+    class="border-4 border-gray-600 rounded-lg cursor-pointer transform transition duration-150 hover:border-gray-400 hover:shadow-lg hover:shadow-gray-500"
   >
     <!-- Card Image -->
     <img

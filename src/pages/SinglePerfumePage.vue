@@ -21,9 +21,16 @@ export default {
           this.perfume = response.data.results;
         })
         .catch((error) => {
-          console.error(error);
+          if (error.response.status === 404) {
+            this.$router.push({ name: "not-found" });
+          } else {
+            this.errorMsg = "Ops, qualcosa è andato storto :(";
+          }
         });
     },
+    // goBack() {
+    //   this.$route.go(-1);
+    // },
   },
   computed: {
     imgSrc() {
@@ -110,6 +117,12 @@ export default {
         </div>
       </div>
     </div>
+
+    <div v-else-if="errorMsg">
+      <!-- <h2 class="text-red-500 text-5xl">PAGINA INESISTENTE :(</h2> -->
+      <!-- <a @click.prevent="goBack()" class="" href=""></a> -->
+    </div>
+    <router-link :to="{ name: 'perfumes' }" class="mt-3"></router-link>
   </div>
 </template>
 
