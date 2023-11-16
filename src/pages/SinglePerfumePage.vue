@@ -51,12 +51,12 @@ export default {
       v-if="perfume"
     >
       <!-- Card Image -->
-      <div class="lg:w-3/5 h-full">
+      <div class="lg:w-3/5 lg:max-h-[800px]">
         <img
           v-if="perfume.image"
           :src="imgSrc"
           :alt="perfume.title"
-          class="h-full w-full"
+          class="h-full w-full flex justify-center object-cover"
         />
 
         <img

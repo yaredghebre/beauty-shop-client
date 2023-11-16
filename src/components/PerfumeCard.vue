@@ -38,12 +38,11 @@ export default {
     <!-- Card Image -->
     <img
       v-if="perfume.image"
-      class="h-[250px] w-full"
+      class="h-[250px] w-full object-cover"
       :src="imgSrc"
       :alt="perfume.title"
     />
     <div v-else class="h-[250px] max-w-full rounded-lg flex justify-center">
-      <!-- <span class="py-24 text-2xl font-semibold">Image not available</span> -->
       <img
         src="../assets/images/logos/thebeautyshop.jpg"
         alt=""
